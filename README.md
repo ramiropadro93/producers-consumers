@@ -11,27 +11,27 @@ Este proyecto implementa un sistema de productores y consumidores utilizando Rab
 
 ## Cómo ejecutar
 
-1. Clona este repositorio.
-2. Navega al directorio del proyecto.
-3. Construye la imagen Docker:
+1. Clonar este repositorio
+2. Navegar al directorio del proyecto
+3. Construir imagen Docker
 
     ```sh
     docker build -t producer-consumer-app .
     ```
 
-4. Crea una red Docker para que los contenedores puedan comunicarse:
+4. Crear red Docker para que los contenedores puedan comunicarse
 
     ```sh
     docker network create producerConsumerNetwork
     ```
 
-5. Inicia un contenedor RabbitMQ en la red creada:
+5. Iniciar contenedor RabbitMQ en la red creada
 
     ```sh
     docker run -d --name rabbitmq --network producerConsumerNetwork -p 5672:5672 -p 15672:15672 rabbitmq:3-management
     ```
 
-6. Inicia el contenedor de la aplicación:
+6. Iniciar contenedor de la aplicación
 
     ```sh
     docker run --env-file .env --network producerConsumerNetwork producer-consumer-app
