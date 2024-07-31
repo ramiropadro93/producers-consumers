@@ -1,5 +1,9 @@
 # Proyecto de concurrencia de productores y consumidores
 
+## Descripción
+
+Este proyecto implementa un sistema de productores y consumidores utilizando RabbitMQ como sistema de mensajería. El propósito es demostrar cómo múltiples productores pueden enviar mensajes a una cola y cómo múltiples consumidores pueden recibir y procesar esos mensajes de manera concurrente.
+
 ## Pasos para ejecutar el proyecto: 
 
 - Instalar docker
